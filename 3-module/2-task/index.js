@@ -1,8 +1,7 @@
 function filterRange(arr, a, b) {
   // ваш код...
-  result = []
-  result = arr.filter(x => arr[x] >= a && arr[x] <= b)
-  return result
+  return arr.filter(x => arr[x] >= a && arr[x] <= b)
+
 }
 
 let arr = [5, 3, 8, 1];

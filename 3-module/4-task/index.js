@@ -1,24 +1,18 @@
 function showSalary(users, age) {
   // ваш код...
-  let result1 = ''
-  let newArr = []
-  users.forEach(x => {
-    if (x.age <= age) {
-      newArr.push(x)
-    }
-  })
-  if (newArr.length - 1 === 0) {
-    return result1 += `${newArr[0].name}, ${newArr[0].balance}'`
-  }
-  newArr.forEach(x => {
-    if (newArr[newArr.length-1] !== x) {
-      result1 += `${x.name}, ${x.balance}\n`
-    }
-    if (newArr[newArr.length-1] === x) {
-      result1 += `${x.name}, ${x.balance}`
-    }
-  })
-  return result1
+  return users.filter(u => u.age <= age).map(str => users[users.length - 1] !== str ? `${str.name}, ${str.balance}`: '').join('\n')
+  // if (newArr.length - 1 === 0) {
+  //   return result1 += `${newArr[0].name}, ${newArr[0].balance}'`
+  // }
+  // newArr.forEach(x => {
+  //   if (newArr[newArr.length-1] !== x) {
+  //     result1 += `${x.name}, ${x.balance}\n`
+  //   }
+  //   if (newArr[newArr.length-1] === x) {
+  //     result1 += `${x.name}, ${x.balance}`
+  //   }
+  // })
+  // return result1
 }
 const dataa = [
   {
